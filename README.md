@@ -1,7 +1,6 @@
-# blockchain_stuffs
-Some docs for blockchain+smart-contracs study
+# Blockchain Stuffs
 
-**Some useful documentations that I've been reading for study blockchain and smart-contracts**
+**Some useful documentations that I've been reading about blockchain and smart-contracts**
 - https://blockgeeks.com/guides/ethereum/
 - https://blockgeeks.com/guides/smart-contracts/
 - https://remix.readthedocs.io/en/latest/quickstart_javascript_vm.html
