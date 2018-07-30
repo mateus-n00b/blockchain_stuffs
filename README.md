@@ -15,4 +15,4 @@
 
 **Plattaforms**
 - [Namecoin](https://namecoin.org/)
-- [Ethereum] (https://www.ethereum.org/)
+- [Ethereum](https://www.ethereum.org/)
