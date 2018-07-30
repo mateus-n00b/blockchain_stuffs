@@ -13,5 +13,6 @@
 - http://remix.ethereum.org
 - https://docs.oraclize.it/#background
 
-**Namecoin**
-[https://namecoin.org/](Namecoin)
+**Plattaforms**
+- [Namecoin](https://namecoin.org/)
+- [Ethereum] (https://www.ethereum.org/)
