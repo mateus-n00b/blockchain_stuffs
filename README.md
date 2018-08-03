@@ -19,3 +19,65 @@
 **Plattaforms**
 - [Namecoin](https://namecoin.org/)
 - [Ethereum](https://www.ethereum.org/)
+
+
+## Installing [npm](https://www.npmjs.com/), [Truffle](https://github.com/trufflesuite/truffle), and [remix-ide](https://github.com/ethereum/remix-ide)
+
+**First steps**
+
+Run the following commands to install npm and nodejs
+
+```
+apt-get updade && \
+apt-get install npm nodejs -y
+```
+
+Now as explained in https://stackoverflow.com/questions/30713136/strange-npm-behavior-when-installing-packages-like-grunt we have to create a symbolic link to the nodejs binary.
+
+```
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+```
+
+**Configuring npm environment**
+
+This step was based on https://docs.npmjs.com/getting-started/fixing-npm-permissions. To avoid permissions erros on npm
+you must run the following commands:
+
+* Back-up your computer before you start.
+
+* Make a directory for global installations:
+
+```
+ mkdir ~/.npm-global
+```
+
+* Configure npm to use the new directory path:
+
+```
+npm config set prefix '~/.npm-global'
+```
+
+* Open or create a ~/.profile file and add this line:
+
+```
+export PATH=~/.npm-global/bin:$PATH
+```
+
+* Back on the command line, update your system variables:
+
+```
+source ~/.profile
+```
+* Test: Download a package globally without using sudo.
+
+ In case of versioning erros,  follow this tutorial https://stackoverflow.com/questions/8191459/how-do-i-update-node-js
+
+## Installing remix-ide and Truffle
+Simple!!! Just execute:
+
+```
+npm install truffle -g
+npm install remix-ide -g
+```
+
+## END
