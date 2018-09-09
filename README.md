@@ -83,4 +83,7 @@ npm install remix-ide -g
 **Your first Dapp**
 - https://truffleframework.com/tutorials/pet-shop
 
+**Interacting with your contracts**
+- https://truffleframework.com/docs/truffle/getting-started/interacting-with-your-contracts
+
 ## END
