@@ -92,7 +92,8 @@ npm install remix-ide -g
 web i web3
 ```
 
-In case of erros like: _github.com[0: 192.30.253.113]: errno=Conexão recusada_
+In case of erros such like: _github.com[0: 192.30.253.113]: errno=Conexão recusada_
+
 See: https://stackoverflow.com/questions/1722807/how-to-convert-git-urls-to-http-urls
 
 ## END
