@@ -45,47 +45,51 @@ contract ContentValidation {
     // }
 
     function registerAllowedProviders(string contentName, address producer) public returns (bool success){
-      // Comment to perform tests
-      // require(msg.sender == registeredContents[contentName].contentOwner);
+        require(msg.sender == registeredContents[contentName].contentOwner);
 
-      if (registeredContents[contentName].exists &&
-        !registeredContents[contentName].allowed_producers[producer]){
-          registeredContents[contentName].allowed_producers[producer] = true;
+        if (registeredContents[contentName].exists &&
+            !registeredContents[contentName].allowed_producers[producer]){
+                registeredContents[contentName].allowed_producers[producer] = true;
+                return true;
+            }else{
+                return false;
+            }
+    }
 
-          // TODO: remove account from bad_nodes list 
-
-          return true;
-        }else{
-          return false;
-        }
-      }
-
-      function registerContent (string contentName, address contentOwner) public returns (bool success){
-        address senderAddress = msg.sender;
-        require(bytes(contentName).length > 0);
-        if (bytes(contentName).length > 0 && !registeredContents[contentName].exists){
-          registeredContents[contentName].name = contentName;
-          registeredContents[contentName].allowed_producers[senderAddress] = true;
-          registeredContents[contentName].contentOwner = contentOwner;
-          registeredContents[contentName].exists = true;
-          // Is not necessary to keep the good_nodes
-          // good_nodes.push(senderAddress);
-          return true;
-        }else{
-          return false;
-        }
-      }
-
-      function getBadNodes() public view returns (address[]) {
-        return bad_nodes;
-      }
-
-      function getGoodNodes() public view returns (address[]){
-        return good_nodes;
-      }
-
-      // Just a debug function
-      function myFunction() public view returns(uint256 myNumber) {
-        return (1999);
+    function registerContent (string contentName, address contentOwner) public returns (bool success){
+      address senderAddress = msg.sender;
+      require(bytes(contentName).length > 0);
+      if (bytes(contentName).length > 0 && !registeredContents[contentName].exists){
+        registeredContents[contentName].name = contentName;
+        registeredContents[contentName].allowed_producers[senderAddress] = true;
+        registeredContents[contentName].contentOwner = contentOwner;
+        registeredContents[contentName].exists = true;
+        // Is not necessary to keep the good_nodes
+        // good_nodes.push(senderAddress);
+        return true;
+      }else{
+        return false;
       }
     }
+
+    function checkContentStatus(string contentName) public view returns (bool exists){
+        if (registeredContents[contentName].exists){
+          return true;
+        }else{
+          return false;
+        }
+    }
+
+    function getBadNodes() public view returns (address[]) {
+      return bad_nodes;
+    }
+
+    function getGoodNodes() public view returns (address[]){
+      return good_nodes;
+    }
+
+    // Just a debug function
+    function myFunction() public view returns(uint256 myNumber) {
+      return (1999);
+    }
+  }
