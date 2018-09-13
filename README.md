@@ -89,7 +89,7 @@ npm install remix-ide -g
 **Installing Web3.js API**
 
 ```
-web i web3
+npm i web3
 ```
 
 In case of erros such like: _github.com[0: 192.30.253.113]: errno=Conexão recusada_
