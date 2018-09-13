@@ -25,7 +25,7 @@ contract ContentValidation {
   // constructor () {admin = msg.sender; }
   // Here the node ask for a producer name Validation on blockchain
   // But if the clients were the bad guys?
-  function verify_name(string contentName, address holder) public returns (bool success){
+  function verifyContent(string contentName, address holder) public returns (bool success){
     require(registeredContents[contentName].exists);
     if (registeredContents[contentName].contentOwner == holder ||
       registeredContents[contentName].allowed_producers[holder]){
@@ -45,7 +45,8 @@ contract ContentValidation {
     // }
 
     function registerAllowedProviders(string contentName, address producer) public returns (bool success){
-        require(msg.sender == registeredContents[contentName].contentOwner);
+        // Comment the line bellow for run tests with different address
+        // require(msg.sender == registeredContents[contentName].contentOwner);
 
         if (registeredContents[contentName].exists &&
             !registeredContents[contentName].allowed_producers[producer]){

@@ -25,16 +25,16 @@ App = {
       ContentValidation.methods.registerContent("dado2", accounts[1]).send({from:account, gas:1000000}).then(function(receipt) {
         console.log(receipt);
       }).catch(console.log);
-      //
-      // // Verificacao do conteudo fornecido
-      // ContentValidation.methods.verify_name("dado2",accounts[3]).send({from:account}).then(function(result) {
-      //   console.log(result);
-      // }).catch(console.log);
 
-      // // Dono do conteudo solicita o cadastramento de um novo distribuidor de conteudo
-      // ContentValidation.methods.registerAllowedProviders("dado2", accounts[3]).call({from:account, gas:1000000}).then(function(receipt) {
-      //   console.log(receipt);
-      // }).catch(console.log);
+      // Verificacao do conteudo fornecido
+      ContentValidation.methods.verifyContent("dado2",accounts[3]).send({from:account}).then(function(result) {
+        console.log(result);
+      }).catch(console.log);
+
+      // Dono do conteudo solicita o cadastramento de um novo distribuidor de conteudo
+      ContentValidation.methods.registerAllowedProviders("dado2", accounts[3]).call({from:account, gas:1000000}).then(function(receipt) {
+        console.log(receipt);
+      }).catch(console.log);
 
 
       ContentValidation.methods.getBadNodes().call({from:account}).then(console.log);
