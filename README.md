@@ -96,4 +96,14 @@ In case of erros such like: _github.com[0: 192.30.253.113]: errno=Conexão recus
 
 See: https://stackoverflow.com/questions/1722807/how-to-convert-git-urls-to-http-urls
 
+
+## Some interesting  discussion topics
+
+- [Memory vs Storage](https://medium.com/loom-network/ethereum-solidity-memory-vs-storage-how-to-initialize-an-array-inside-a-struct-184baf6aa2eb)
+- [Optimizing your Solidity contract’s gas usage](https://medium.com/coinmonks/optimizing-your-solidity-contracts-gas-usage-9d65334db6c7)
+
+### Web3 APIs
+- [Web3 Javascript API](https://github.com/ethereum/wiki/wiki/JavaScript-API)
+- [Web3 Python API](https://github.com/ethereum/web3.py)
+
 ## END
